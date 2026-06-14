@@ -20,7 +20,7 @@ bool ispalindrome(string s){
         right--;
 
     } 
-    return false;
+    return true;
 }
 
 int main(){
