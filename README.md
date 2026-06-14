@@ -1,4 +1,4 @@
-# 🎯 My DSA Patterns Journey: Mastering Coding Interviews
+#  My DSA Patterns Journey: Mastering Coding Interviews
 
 Welcome to my personal **DSA Patterns Series** repository!
 
@@ -19,4 +19,4 @@ This repository serves as my structured progress tracker, code playground, and d
 
 ---
 
-> _"Don't learn to solve problems. Learn to recognize patterns."_ 💻🔥
+> _"Don't learn to solve problems. Learn to recognize patterns."_ 
