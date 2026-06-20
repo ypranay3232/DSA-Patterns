@@ -16,6 +16,30 @@ using namespace std;
 class solution
 {
 public:
+    // APPROACH 1: BRUTE FORCE
+    // Logic: Try every possible pair of elements.
+    // Time Complexity: O(N^2) - because of the nested loops.
+    // Space Complexity: O(1) - no extra memory used.
+    vector<int> twosumBruteForce(vector<int> &nums, int target)
+    {
+        // Outer loop selects the first number (A)
+        for (int i = 0; i < nums.size(); i++)
+        {
+            // Inner loop selects the second number (B)
+            // We start 'j' from 'i + 1' so we don't reuse the exact same element
+            for (int j = i + 1; j < nums.size(); j++)
+            {
+                // Check if the two numbers add up to the target
+                if (nums[i] + nums[j] == target)
+                {
+                    return {i, j}; // Return their indices
+                }
+            }
+        }
+        return {}; // Return empty vector if no solution is found
+    }
+
+    // Optimised sol
     // we create a vector function that contains a nums array and a target.
     vector<int> twosum(vector<int> &nums, int target)
     {
@@ -53,17 +77,22 @@ int main()
     vector<int> nums = {2, 11, 7, 15};
     int target = 9;
 
-    vector<int> result = solver.twosum(nums,target);
-
-    // Output the results
-    if (!result.empty())
+    // Running Brute Force Approach
+    cout << "--- Testing Brute Force Approach ---" << endl;
+    vector<int> resultBrute = solver.twosumBruteForce(nums, target);
+    if (!resultBrute.empty())
     {
-        cout << "Indices found: [" << result[0] << ", " << result[1] << "]" << endl;
-        cout << "The numbers are: " << nums[result[0]] << " and " << nums[result[1]] << endl;
+        cout << "Indices found: [" << resultBrute[0] << ", " << resultBrute[1] << "]" << endl;
+        cout << "The numbers are: " << nums[resultBrute[0]] << " and " << nums[resultBrute[1]] << "\n\n";
     }
-    else
+
+    // Running Optimized Approach
+    cout << "--- Testing Optimized Approach ---" << endl;
+    vector<int> resultOpt = solver.twosum(nums, target);
+    if (!resultOpt.empty())
     {
-        cout << "No two sum solution found." << endl;
+        cout << "Indices found: [" << resultOpt[0] << ", " << resultOpt[1] << "]" << endl;
+        cout << "The numbers are: " << nums[resultOpt[0]] << " and " << nums[resultOpt[1]] << endl;
     }
 
     return 0;
