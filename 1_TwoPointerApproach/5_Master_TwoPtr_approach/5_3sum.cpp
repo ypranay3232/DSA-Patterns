@@ -13,7 +13,7 @@ class solution{
     // we need a vector of vector because we have triplets of i,j,k which are kept inside a vector so a vector which holds another vector results
     vector<vector<int>> threeSum(vector<int>& nums){
         vector<vector<int>> results;
-        int n = nums.size()-1;//we get the size
+        int n = nums.size();//we get the size
         if (n < 3) return results; // Safety check
 
         // now sort the array 
@@ -32,8 +32,8 @@ class solution{
             }
 
             // now we create j,k pointers
-            int j = i+1;
-            int k = n-1;
+            int j = i + 1;
+            int k = n - 1;
             while(j<k){
                 int sum = nums[i] + nums[j] + nums[k];
 
