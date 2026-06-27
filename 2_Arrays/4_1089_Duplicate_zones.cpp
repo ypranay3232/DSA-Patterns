@@ -23,9 +23,9 @@ class sol{
             if(num == 0){
                 helper.push(0);
             }
-            // The front of the queue is always what belongs in this position next, so we check the front number and we pop it once we get next element. so we can shift elements to right.
-            num = helper.front();
-            helper.pop();
+            // so we check the front number and we pop it once we get next element. because queue is FIFO : when we insert new elements (after duplicating 0's) we have to remove the remaining elements which are inserted at front because array space is constant so we do as : 
+            num = helper.front(); //point to front of queue if its not duplicate
+            helper.pop();//remove it
         }
     }
 };
