@@ -40,6 +40,7 @@ class sol{
 int main(){
     sol obj;
     vector<int> heights = {1, 1, 4, 2, 1, 3};
+    // Given 1,1,4,2,1,3 ==> when we sort ==> 1,1,1,2,3,4 : so 3 are in mismatch so we return 3
 
     cout << "Input Heights: [1, 1, 4, 2, 1, 3]" << endl;
     cout << "Expected Output: 3" << endl;
